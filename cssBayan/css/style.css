@@ -1,0 +1,173 @@
+@import"reset.css";
+
+
+
+
+html{
+    box-sizing: border-box;
+  }
+
+  *,*::before,*:after{
+    box-sizing: inherit;
+  }
+
+
+
+.back{
+    background-color: antiquewhite;
+}
+
+
+
+
+@media (max-width: 788px) {
+    .Header_for_memes {
+      font-size: 1.5rem;
+    }
+  
+    .meme_text {
+      font-size: 1.2rem;
+    }
+  
+    
+  
+    .wrapper {
+      width: 90%;
+    }
+  }
+  
+  @media (min-width: 789px) and (max-width: 1888px) {
+    .Header_for_memes {
+      font-size: 2rem;
+    }
+  
+    .meme_text {
+      font-size: 1.5rem;
+    }
+  
+   
+  
+    .wrapper {
+      width: 60%;
+    }
+  }
+  
+  @media (min-width: 1889px) {
+    .Header_for_memes {
+      font-size: 2.5rem;
+    }
+  
+    .meme_text {
+      font-size: 1.8rem;
+    }
+  
+    .wrapper {
+      width: 40%;
+    }
+  }
+
+
+.wrapper{
+    
+  
+    margin:0rem auto;
+    min-height: 100vh;
+
+}
+
+
+
+.meme{
+    border-top: 0.15rem solid #000;
+}
+
+
+
+
+
+.meme_text{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+
+
+.text_icon_picture_cross{
+    display:none;
+    transition: transform 0.5s;
+}
+
+
+
+.meme_pic{
+   
+    margin-left: auto;
+    margin-right: auto;
+   height: 20rem;
+   width: 20rem;
+   display:none;
+   transition: transform 0.5s;
+
+  
+   
+}
+
+
+
+.meme_picture{
+    height: 100%;
+    width: 100%; 
+ 
+
+}
+
+
+
+
+@media (hover: hover) and (pointer: fine){
+
+
+    .meme{
+      
+        cursor: pointer;
+    }
+
+.meme:hover .text_icon_picture_cross{
+    transform: rotate(45deg);
+}
+
+
+.meme:hover .meme_text{
+    color: blue;
+}
+
+.wrapper:hover .text_icon_picture_cross{
+    display:block;
+    }
+
+/*.meme_pic:hover .meme_pic  {
+        display:block;
+        transform: rotate(36deg);
+  
+        }*/
+.meme:hover .meme_pic  {
+            display:block;
+            
+            opacity:0; 
+transition: 1s; 
+animation: show 3s 1; 
+animation-fill-mode: forwards; 
+
+            }
+            @keyframes show{
+                0%{
+                opacity:0;
+                }
+                100% {
+                opacity:1;
+                }
+                }
+
+    }
